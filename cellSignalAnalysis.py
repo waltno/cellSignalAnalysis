@@ -252,7 +252,7 @@ scSigs = scSigs.loc[commonGenes]
 geneWeights = geneWeights.reindex(commonGenes)
 geneWeights = geneWeights.fillna(1.0)
 #Re-normalise signals?
-#scSigs = scSigs/scSigs.sum(axis=0)
+scSigs = scSigs/scSigs.sum(axis=0)
 #Some useful messages
 print("Fitting %d bulk samples to %d cellular signals using %d genes"%(toc.shape[1],scSigs.shape[1],toc.shape[0]))
 print("Signals named:")
